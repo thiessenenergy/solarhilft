@@ -1,0 +1,160 @@
+:root {
+  /* Farben aus dem Instagram-Logo @solarhilft */
+  --sonne: #f2931a;
+  --sonne-hell: #fdefd6;
+  --tief: #0e4a2f;
+  --tief-2: #127045;
+  --text: #1f2a24;
+  --leise: #5a665e;
+  --flaeche: #ffffff;
+  --grund: #fef8ec;
+  --linie: #ece2cf;
+  --radius: 14px;
+  --breite: 1120px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--grund);
+  color: var(--text);
+  font: 17px/1.65 "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--tief-2); }
+h1, h2, h3 { color: var(--tief); line-height: 1.2; margin: 0 0 .6em; }
+h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); letter-spacing: -.02em; }
+h2 { font-size: clamp(1.6rem, 3.4vw, 2.3rem); letter-spacing: -.01em; }
+h3 { font-size: 1.15rem; }
+p { margin: 0 0 1em; }
+
+.rahmen { width: min(var(--breite), 100% - 32px); margin-inline: auto; }
+section { padding: clamp(56px, 8vw, 96px) 0; }
+.abschnitt-weiss { background: var(--flaeche); }
+.dachzeile {
+  display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--sonne); margin-bottom: .8em;
+}
+.einleitung { font-size: 1.15rem; color: var(--leise); max-width: 46em; }
+
+/* Kopf */
+.kopf {
+  position: sticky; top: 0; z-index: 10; background: rgba(254, 248, 236, .95);
+  backdrop-filter: blur(8px); border-bottom: 1px solid var(--linie);
+}
+.kopf .rahmen { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px; }
+.marke { display: flex; align-items: center; }
+.marke img { height: 56px; width: auto; }
+.navi { display: flex; gap: 22px; }
+.navi a { color: var(--text); text-decoration: none; font-weight: 600; font-size: .95rem; }
+.navi a:hover { color: var(--tief-2); }
+@media (max-width: 760px) { .navi { display: none; } }
+
+.knopf {
+  display: inline-block; padding: 13px 24px; border-radius: 999px; font-weight: 700;
+  text-decoration: none; background: var(--sonne); color: #2a1a00; border: 2px solid var(--sonne);
+}
+.knopf:hover { background: #dc8210; border-color: #dc8210; }
+.knopf.leer { background: transparent; color: var(--tief); border-color: var(--tief); }
+.knopf.leer:hover { background: var(--tief); color: #fff; }
+
+/* Bühne */
+.buehne { padding-top: clamp(40px, 6vw, 72px); }
+.buehne .rahmen.oben { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+.buehne p { font-size: 1.2rem; color: var(--leise); max-width: 34em; }
+.knoepfe { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1.6em; }
+.buehnenbild { position: relative; }
+.buehnenbild img { border-radius: 22px; aspect-ratio: 4 / 5; object-fit: cover; width: 100%; box-shadow: 0 24px 60px -24px rgba(14, 74, 47, .45); }
+.buehnenbild figcaption {
+  position: absolute; left: 16px; bottom: 16px; right: 16px; background: rgba(255, 255, 255, .93);
+  border-radius: 12px; padding: 10px 14px; font-size: .9rem; color: var(--text);
+}
+@media (max-width: 860px) { .buehne .rahmen.oben { grid-template-columns: 1fr; } .buehnenbild { max-width: 440px; } }
+
+/* Kennzahlen */
+.zahlen { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 56px; }
+.zahl { background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); padding: 20px; }
+.zahl strong { display: block; font-size: 1.9rem; color: var(--tief); line-height: 1.1; }
+.zahl span { color: var(--leise); font-size: .92rem; }
+@media (max-width: 760px) { .zahlen { grid-template-columns: repeat(2, 1fr); } .zahl strong { font-size: 1.45rem; } }
+
+/* Zwei Spalten */
+.zweispaltig { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
+@media (max-width: 860px) { .zweispaltig { grid-template-columns: 1fr; } }
+
+.leitsaetze { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.leitsatz { background: var(--grund); border-radius: var(--radius); padding: 22px; border-left: 4px solid var(--sonne); }
+.leitsatz p { margin: 0; color: var(--leise); font-size: .97rem; }
+@media (max-width: 560px) { .leitsaetze { grid-template-columns: 1fr; } }
+
+/* Zeitleiste */
+.zeitleiste { list-style: none; margin: 0; padding: 0; border-left: 3px solid var(--linie); }
+.zeitleiste li { position: relative; padding: 0 0 26px 26px; }
+.zeitleiste li::before {
+  content: ""; position: absolute; left: -9px; top: 5px; width: 15px; height: 15px;
+  border-radius: 50%; background: var(--flaeche); border: 3px solid var(--sonne);
+}
+.zeitleiste li.fertig::before { background: var(--sonne); }
+.zeitleiste time { font-weight: 700; color: var(--tief); display: block; }
+.zeitleiste p { margin: 0; color: var(--leise); }
+
+.galerie { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 40px; }
+.galerie figure { margin: 0; }
+.galerie img { border-radius: 12px; aspect-ratio: 3 / 4; object-fit: cover; width: 100%; }
+.galerie figcaption { font-size: .85rem; color: var(--leise); margin-top: 6px; }
+@media (max-width: 760px) { .galerie { grid-template-columns: repeat(2, 1fr); } }
+
+/* Technik */
+.technik { list-style: none; margin: 0; padding: 0; background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); }
+.technik li { padding: 14px 18px 14px 44px; border-bottom: 1px solid var(--linie); position: relative; color: var(--leise); }
+.technik li:last-child { border-bottom: 0; }
+.technik li::before { content: ""; position: absolute; left: 18px; top: 22px; width: 10px; height: 10px; border-radius: 50%; background: var(--sonne); }
+.technik strong { color: var(--tief); }
+
+/* Kosten */
+.kosten { width: 100%; border-collapse: collapse; background: var(--flaeche); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--linie); }
+.kosten td { padding: 14px 18px; border-bottom: 1px solid var(--linie); }
+.kosten td:last-child { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 600; }
+.kosten tr:last-child td { border-bottom: 0; background: var(--sonne-hell); font-weight: 700; }
+.kosten small { display: block; color: var(--leise); font-weight: 400; }
+
+/* Schritte */
+.schritte { counter-reset: schritt; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; list-style: none; padding: 0; margin: 0; }
+.schritte li { counter-increment: schritt; background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); padding: 22px; }
+.schritte li::before {
+  content: counter(schritt); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
+  background: var(--tief); color: #fff; font-weight: 700; margin-bottom: 12px;
+}
+.schritte p { margin: 0; color: var(--leise); font-size: .96rem; }
+@media (max-width: 860px) { .schritte { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .schritte { grid-template-columns: 1fr; } }
+
+/* Partner */
+.partner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.partnerkarte { background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); padding: 24px; }
+.partnerkarte .rolle { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--sonne); }
+.partnerkarte p { margin: 0; color: var(--leise); font-size: .96rem; }
+@media (max-width: 860px) { .partner { grid-template-columns: 1fr; } }
+
+/* Unterstützen */
+.mitmachen { background: var(--tief); color: #e6f1ea; }
+.mitmachen h2, .mitmachen h3 { color: #fff; }
+.mitmachen .einleitung { color: #c3dacb; }
+.wege { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
+.weg { background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .16); border-radius: var(--radius); padding: 24px; }
+.weg p { color: #c3dacb; margin-bottom: 0; }
+.weg a { color: var(--sonne); font-weight: 700; }
+.hinweis { margin-top: 28px; font-size: .92rem; color: #a5c4b0; }
+@media (max-width: 860px) { .wege { grid-template-columns: 1fr; } }
+
+/* Fuß */
+.fuss { padding: 32px 0; font-size: .92rem; color: var(--leise); }
+.fuss .rahmen { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+.fuss a { color: var(--leise); margin-left: 18px; }
+
+/* Rechtstexte */
+.rechtstext { max-width: 760px; }
+.rechtstext h2 { font-size: 1.3rem; margin-top: 1.6em; }
+
+.platzhalter { background: #ffe9a8; padding: 0 4px; border-radius: 4px; }
