@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Solar hilft!//Sam Childers Kassel//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sam-childers-2026-10-17@solarhilft.de
+DTSTAMP:20261014T180000Z
+DTSTART:20261017T160000Z
+DTEND:20261017T190000Z
+SUMMARY:Sam Childers – der echte Machine Gun Preacher live in Kassel
+LOCATION:Jesus Centrum Kassel\, Mendelssohn-Bartholdy-Straße 27\, 34134 Ka
+ ssel
+DESCRIPTION:Sam Childers erzählt seine Geschichte – mit deutscher Übers
+ etzung. Eintritt frei. Solar hilft! lädt ein: https://solarhilft.de/sam-c
+ hilders/
+URL:https://solarhilft.de/sam-childers/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sam Childers heute um 18 Uhr im Jesus Centrum Kassel
+TRIGGER:-PT3H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

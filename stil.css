@@ -104,6 +104,18 @@ section { padding: clamp(56px, 8vw, 96px) 0; }
 .galerie img { border-radius: 12px; aspect-ratio: 3 / 4; object-fit: cover; width: 100%; }
 .galerie figcaption { font-size: .85rem; color: var(--leise); margin-top: 6px; }
 @media (max-width: 760px) { .galerie { grid-template-columns: repeat(2, 1fr); } }
+.galerie.quer { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.galerie.quer img { aspect-ratio: 4 / 3; }
+@media (max-width: 560px) { .galerie.quer { grid-template-columns: 1fr; } }
+.bildnachweis { font-size: .8rem; color: var(--leise); margin-top: 14px; }
+
+/* Hinweisband über der Bühne (Veranstaltungen) */
+.hinweisband { display: block; background: var(--tief); color: #fff; text-decoration: none; font-size: .95rem; }
+.hinweisband .rahmen { padding: 11px 0; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; justify-content: center; text-align: center; }
+.hinweisband strong { color: var(--sonne); }
+.hinweisband span.pfeil { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.hinweisband:hover span.pfeil { color: var(--sonne); }
+.vorbei { background: var(--sonne-hell); border-radius: 12px; padding: 10px 14px; color: var(--text) !important; font-size: 1rem !important; }
 
 /* Technik */
 .technik { list-style: none; margin: 0; padding: 0; background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); }
