@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="17 43 54 58">
+  <title>Solar hilft!</title>
+  <circle cx="43.0" cy="66.8" r="13.2" fill="#f2931a"/>
+  <line x1="26.40" y1="66.80" x2="21.20" y2="66.80" stroke="#f2931a" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="28.62" y1="58.50" x2="24.12" y2="55.90" stroke="#f2931a" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="34.95" y1="52.28" x2="32.43" y2="47.73" stroke="#f2931a" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="43.00" y1="50.20" x2="43.00" y2="45.00" stroke="#f2931a" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="51.05" y1="52.28" x2="53.57" y2="47.73" stroke="#f2931a" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="57.08" y1="58.00" x2="61.49" y2="55.25" stroke="#f2931a" stroke-width="2.4" stroke-linecap="round"/>
+  <defs><clipPath id="modul"><path d="M32.5,70.0 C42,67.4 53,65.2 63.8,63.7 C65.4,69.5 65.8,75.5 65.0,81.2 C58,84.6 48,86.6 37,87.4 C33,87.6 29.4,87.2 27.4,86.6 C25.6,81.4 26.2,74.8 32.5,70.0 Z"/></clipPath></defs>
+  <path d="M32.5,70.0 C42,67.4 53,65.2 63.8,63.7 C65.4,69.5 65.8,75.5 65.0,81.2 C58,84.6 48,86.6 37,87.4 C33,87.6 29.4,87.2 27.4,86.6 C25.6,81.4 26.2,74.8 32.5,70.0 Z" fill="#127045" stroke="#fef8ec" stroke-width="2.2" stroke-linejoin="round" paint-order="stroke"/>
+  <path d="M40.6,66.0 C37.2,72 35.6,79 36.0,90 M48.8,64.2 C46.2,71 45.0,79 45.4,90 M57.0,62.6 C55.0,70 54.4,77 54.8,89 M24,79.0 C34,75.4 50,72.4 68,71.0 M24,85.8 C34,82.4 50,79.6 68,78.2" fill="none" stroke="#fef8ec" stroke-width="1.9" stroke-linecap="round" clip-path="url(#modul)"/>
+  <path d="M22.0,86.2 C27,85.4 32,86.6 36.5,88.8 C41.5,90.6 47,90.6 52,89.4 C57.5,88.0 61.6,85.8 64.6,84.0 C66.2,83.2 67.2,84.6 66.2,86.0 C62.6,91.0 57.6,96.4 50.4,98.2 C41.6,100.0 32.4,98.2 26.6,94.0 C23.8,91.8 22.4,89.2 22.0,86.2 Z" fill="#0e4a2f" stroke="#fef8ec" stroke-width="1.6" stroke-linejoin="round" paint-order="stroke"/>
+  <path d="M40.0,93.4 C46.5,94.4 53.5,93.2 60.5,89.4" fill="none" stroke="#fef8ec" stroke-width="1.4" stroke-linecap="round"/>
+</svg>
